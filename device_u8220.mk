@@ -43,12 +43,12 @@ PRODUCT_COPY_FILES += \
 # DHCP config for wifi
 PRODUCT_COPY_FILES += \
     device/huawei/u8220/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/huawei/u8220/prebuilt/ar6000.ko:system/wifi/ar6000.ko \
-    device/huawei/u8220/prebuilt/athtcmd_ram.bin:system/wifi/athtcmd_ram.bin \
-    device/huawei/u8220/prebuilt/athwlan.bin.z77:system/wifi/athwlan.bin.z77 \
-    device/huawei/u8220/prebuilt/caldata.bin.ar6002:system/wifi/caldata.bin.ar6002 \
-    device/huawei/u8220/prebuilt/data.patch.hw2_0.bin.ar6002:system/wifi/data.patch.hw2_0.bin.ar6002 \
-    device/huawei/u8220/prebuilt/device.bin:system/wifi/device.bin
+    device/huawei/u8220/prebuilt/ar6000.ko:system/lib/modules/ar6000.ko \
+    device/huawei/u8220/prebuilt/athtcmd_ram.bin:system/etc/firmware/athtcmd_ram.bin \
+    device/huawei/u8220/prebuilt/athwlan.bin.z77:system/etc/firmware/athwlan.bin.z77 \
+    device/huawei/u8220/prebuilt/caldata.bin.ar6002:system/etc/firmware/caldata.bin.ar6002 \
+    device/huawei/u8220/prebuilt/data.patch.hw2_0.bin:system/etc/firmware/data.patch.hw2_0.bin \
+    device/huawei/u8220/prebuilt/device.bin:system/etc/firmware/device.bin
 
 PRODUCT_COPY_FILES += \
     device/huawei/u8220/ueventd.qcom.rc:root/ueventd.qcom.rc

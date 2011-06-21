@@ -69,4 +69,3 @@ struct msm_audio_voicememo_config {
 };
 
 #endif
-

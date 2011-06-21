@@ -41,7 +41,7 @@
 /******************************************************************************/
 
 #if defined(COPYBIT_MSM7K)
-#define MAX_SCALE_FACTOR    (3)
+#define MAX_SCALE_FACTOR    (4)
 #define MAX_DIMENSION       (4096)
 #elif defined(COPYBIT_QSD8K)
 #define MAX_SCALE_FACTOR    (8)
@@ -142,7 +142,7 @@ static void set_image(struct mdp_img *img, const struct copybit_image_t *rhs)
     img->offset     = hnd->offset;
 #if defined(COPYBIT_MSM7K)
     if (hnd->flags & private_handle_t::PRIV_FLAGS_USES_GPU) {
-        img->offset += hnd->map_offset;
+     //   img->offset += hnd->map_offset;
         img->memory_id = hnd->gpu_fd;
         if (img->format == MDP_RGBA_8888) {
             // msm7201A GPU only supports BGRA_8888 destinations
@@ -288,6 +288,7 @@ static int set_parameter_copybit(
                 ctx->mFlags &= ~MDP_DITHER;
             }
             break;
+#ifdef MDP_BLUR
         case COPYBIT_BLUR:
             if (value == COPYBIT_ENABLE) {
                 ctx->mFlags |= MDP_BLUR;
@@ -295,6 +296,7 @@ static int set_parameter_copybit(
                 ctx->mFlags &= ~MDP_BLUR;
             }
             break;
+#endif
         case COPYBIT_TRANSFORM:
             ctx->mFlags &= ~0x7;
             ctx->mFlags |= value & 0x7;
