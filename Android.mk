@@ -12,5 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-include $(call all-named-subdir-makefiles, liblights libaudio libcopybit libsensors)
+ifeq ($(TARGET_DEVICE),u8220)
+    include $(call all-named-subdir-makefiles, liblights libaudio libcopybit libsensors)
+endif
