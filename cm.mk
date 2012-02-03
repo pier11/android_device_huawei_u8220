@@ -10,7 +10,7 @@ $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_u8220
+PRODUCT_NAME := generic_u8220
 PRODUCT_BRAND := huawei
 PRODUCT_DEVICE := u8220
 PRODUCT_MODEL := U8220/U8230
