@@ -2,25 +2,25 @@
 $(call inherit-product, device/huawei/u8220/device_u8220.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+$(call inherit-product, vendor/cm/config/common.mk)
 
 # Include GSM-only stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/cm/config/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := generic_u8220
+PRODUCT_NAME := cm_u8220
 PRODUCT_BRAND := huawei
 PRODUCT_DEVICE := u8220
 PRODUCT_MODEL := U8220/U8230
 PRODUCT_MANUFACTURER := Huawei
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u8220 BUILD_ID=GRJ22 BUILD_FINGERPRINT=google/passion/passion:2.3.4/GRJ22/121341:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.4 GRJ22 121341 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u8220 BUILD_ID=ITL41D BUILD_FINGERPRINT=google/yakju/maguro:4.0.1/ITL41D/223971:user/release-keys PRIVATE_BUILD_DESC="maguro-user 4.0.1 ITL41D 223971 release-keys"
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := U8220
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/cm/config/common_versions.mk
 
 #
 # Copy DS specific prebuilt files
